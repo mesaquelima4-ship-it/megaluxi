@@ -1,37 +1,126 @@
-<header style="background-color: #ffffff; padding: 40px 20px; text-align: center; border-bottom: 5px solid #f2b705;">
-    <img src="logo-megaluxi.png" alt="Megaluxi Logo" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto;">
-    
-    <div style="margin-top: 15px;">
-        <h2 style="color: #003366; font-size: 1.5em; margin: 0; letter-spacing: 1px; text-transform: uppercase;">
-            Iluminação Solar e Tecnologia
-        </h2>
-        <p style="margin: 5px 0 0; color: #666; font-style: italic;">Soluções Inteligentes para sua Casa</p>
-    </div>
-</header>
-<main style="padding: 20px; max-width: 800px; margin: auto;">
-    <section style="text-align: center; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h2 style="color: #003366;">Luminária Solar com Sensor de Movimento</h2>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megaluxi - Iluminação Solar & Tecnologia</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #001f3f; }
         
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin: 20px 0; text-align: left;">
-            <div style="flex: 1; min-width: 250px; padding: 10px;">
-                <ul style="list-style: none; padding: 0;">
-                    <li>☀️ **Energia 100% Solar:** Sem fios e sem custos na conta de luz.</li>
-                    <li>💡 **100 LEDs potentes:** Iluminação ampla e brilhante (600 Lúmens).</li>
-                    <li>🛡️ **Resistência IP65:** À prova d'água e calor extremo.</li>
-                    <li>🔋 **Bateria de 1800mAh:** Longa duração durante toda a noite.</li>
-                    <li>🚶 **Sensor de Presença:** Liga automaticamente ao detectar movimento.</li>
-                </ul>
+        /* Cabeçalho Estilo Profissional */
+        header { 
+            background-color: #001f3f; 
+            padding: 30px 10px; 
+            text-align: center; 
+            color: #f2b705;
+        }
+        .logo-img {
+            width: 100%;
+            max-width: 350px; /* Tamanho do seu logo */
+            height: auto;
+            margin-bottom: 5px;
+        }
+        .slogan {
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #f2b705;
+            margin-top: 5px;
+        }
+
+        /* Banner de Estoque */
+        .status-bar {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        /* Container do Produto */
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; }
+        
+        .product-card { text-align: left; }
+        
+        .product-image {
+            width: 100%;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 1.6em; color: #001f3f; margin-bottom: 10px; }
+        .description { color: #333; line-height: 1.4; margin-bottom: 15px; }
+
+        .price-old { text-decoration: line-through; color: #888; font-size: 1em; margin-bottom: 2px; }
+        .price-new { color: #d9534f; font-size: 2.2em; font-weight: bold; margin-bottom: 5px; }
+        .shipping-info { color: #333; font-size: 0.9em; margin-bottom: 25px; }
+
+        /* Botão WhatsApp Estilo Imagem */
+        .btn-whatsapp {
+            display: block;
+            background-color: #f2b705;
+            color: #001f3f;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .features-check {
+            margin-top: 30px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .features-check div { margin-bottom: 8px; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="1000697403.png" alt="MEGALUXI" class="logo-img">
+    <div class="slogan">Iluminação Solar & Tecnologia</div>
+</header>
+
+<div class="status-bar">
+    📍 PRODUTO EM ESTOQUE - ENVIO IMEDIATO NO AMAPÁ
+</div>
+
+<div class="container">
+    <div class="product-card">
+        <img src="1000697386.png" alt="Kit 5 Luminárias Solares" class="product-image" onerror="this.src='https://via.placeholder.com/500x350?text=IMAGEM+DO+KIT+5+LUMINÁRIAS'">
+
+        <h1>Kit 5 Luminárias Solares LED</h1>
+        <p class="description">Sensor de presença, 100% à prova d'água e custo zero na conta de luz.</p>
+
+        <div class="price-old">De R$ 139,99</div>
+        <div class="price-new">R$ 119,99</div>
+        <div class="shipping-info">Entrega grátis em pontos estratégicos de Macapá</div>
+
+        <a href="https://wa.me/5596984263542?text=Olá!+Vi+o+site+da+MegaLuxi+e+tenho+interesse+no+Kit+de+5+Luminárias" class="btn-whatsapp">
+            COMPRAR PELO WHATSAPP
+        </a>
+
+        <div class="features-check">
+            <div>✅ <strong>Por que comprar na MegaLuxi?</strong></div>
+            <div style="font-size: 0.9em; color: #555; padding-left: 20px;">
+                🚚 Receba hoje em Macapá ou Santana<br>
+                🛠️ Garantia de funcionamento e suporte local<br>
+                ☀️ Tecnologia testada no clima do Amapá
             </div>
         </div>
+    </div>
+</div>
 
-        <div style="background: #f9f9f9; padding: 15px; border-radius: 10px; border-left: 5px solid #f2b705;">
-            <p style="font-size: 1.5em; font-weight: bold; color: #27ae60; margin: 0;">R$ 119,99 (Kit com 5 unidades)</p>
-            <p style="font-size: 0.9em; color: #666;">*Ideal para fachadas, jardins e segurança doméstica.*</p>
-        </div>
+<footer style="text-align: center; padding: 20px; color: #888; font-size: 0.8em;">
+    © 2024 MegaLuxi - Macapá/AP
+</footer>
 
-        <a href="https://wa.me/5596984263542?text=Olá!+Quero+adquirir+o+kit+de+luminárias+visto+no+site" 
-           style="display: inline-block; background: #25d366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; font-size: 1.2em;">
-           COMPRAR AGORA NO WHATSAPP
-        </a>
-    </section>
-</main>
+</body>
+</html>
