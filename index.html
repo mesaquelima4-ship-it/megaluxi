@@ -1,106 +1,198 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>MEGALUXI | Iluminação Solar & Tecnologia</title>
-  <meta name="description" content="MEGALUXI - Iluminação solar inteligente com sensor de presença. Economia, segurança e sustentabilidade." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
-    body { background: #0f172a; color: #f8fafc; }
-    header { background: #020617; padding: 20px; text-align: center; }
-    header h1 { color: #facc15; font-size: 2.2rem; }
-    header p { color: #cbd5f5; margin-top: 8px; }.hero { padding: 40px 20px; text-align: center; }
-.hero h2 { font-size: 2rem; margin-bottom: 15px; }
-.hero p { max-width: 700px; margin: auto; color: #cbd5f5; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
 
-.btn { display: inline-block; margin-top: 25px; padding: 15px 30px; background: #facc15; color: #020617; text-decoration: none; font-weight: bold; border-radius: 8px; }
+    header {
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 3px solid #f5b301;
+    }
 
-.section { padding: 40px 20px; max-width: 1100px; margin: auto; }
-.section h3 { text-align: center; margin-bottom: 30px; font-size: 1.8rem; }
+    header img {
+      max-width: 220px;
+    }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.card { background: #020617; padding: 25px; border-radius: 12px; text-align: center; }
-.card h4 { margin-bottom: 10px; color: #facc15; }
-.card p { color: #cbd5f5; }
+    header h2 {
+      margin: 5px 0 0;
+      font-size: 16px;
+      color: #0a2c5e;
+    }
 
-.product { background: #020617; padding: 30px; border-radius: 15px; text-align: center; }
-.price { font-size: 2rem; color: #22c55e; margin: 15px 0; }
-.old { text-decoration: line-through; color: #94a3b8; font-size: 1.2rem; }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
 
-footer { background: #020617; text-align: center; padding: 20px; color: #94a3b8; }
+    .produto {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
 
-@media (max-width: 600px) {
-  header h1 { font-size: 1.8rem; }
-  .hero h2 { font-size: 1.6rem; }
-}
+    .produto img {
+      width: 100%;
+      border-radius: 8px;
+    }
 
+    .produto h1 {
+      margin-top: 0;
+    }
+
+    .preco {
+      font-size: 26px;
+      color: #0a7d2c;
+      font-weight: bold;
+    }
+
+    button {
+      background: #f5b301;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #e0a700;
+    }
+
+    .carrinho {
+      margin-top: 30px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .carrinho h2 {
+      margin-top: 0;
+    }
+
+    .rodape {
+      background: #0a2c5e;
+      color: #fff;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    .rodape a {
+      color: #f5b301;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .produto {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
-<body>  <header style="display:flex; flex-direction:column; align-items:center; gap:10px;">
-    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBUQEBIVFRUVFRUVFRUVFRUVFRUXFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAFBgMEAAIHAf/EADwQAAEDAgQDBgMGBwAAAAAAAAEAAgMEEQUSITEGEyJBUWFxgZEHFDKBkaGxwdHwIzNSYnKC/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAIxEAAwACAgICAgMAAAAAAAAAAAECEQMhEjEEEyJBUWEUMv/aAAwDAQACEQMRAD8A9kREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREH//Z" alt="Logo MEGALUXI" style="max-width:220px; width:100%; height:auto;" />
-    <p style="color:#cbd5f5; font-size:1rem;">Iluminação Solar & Tecnologia</p>
-    <p style="margin-top:4px; color:#22c55e; font-weight:bold">📍 Atendimento local em Macapá e Santana – AP</p>
-  </header>  <section class="hero">
-    <h2>Ilumine seu espaço sem gastar energia</h2>
-    <p>Luminárias solares com sensor de presença, ideais para casas, comércios, quintais e áreas externas em <strong>Macapá e Santana – AP</strong>. Atendimento rápido, entrega local e suporte direto pelo WhatsApp.</p>
-    <a href="#produto" class="btn">Ver Oferta</a>
-  </section>  <section class="section">
-    <h3>Por que escolher a MEGALUXI em Macapá e Santana?</h3>
-    <div class="grid">
-      <div class="card">
-        <h4>📍 Atendimento Local</h4>
-        <p>Venda e suporte direto para clientes de Macapá e Santana.</p>
-      </div>
-      <div class="card">
-        <h4>⚡ Energia Solar</h4>
-        <p>Funciona 100% com energia do sol. Zero gasto na conta de luz.</p>
-      </div>
-      <div class="card">
-        <h4>👀 Sensor de Presença</h4>
-        <p>Acende automaticamente ao detectar movimento.</p>
-      </div>
-      <div class="card">
-        <h4>🌧️ Resistente</h4>
-        <p>Resistente à chuva e ao calor. Ideal para áreas externas.</p>
-      </div>
-    </div>
-  </section>  <section class="section" id="produto">
-    <h3>Oferta Especial</h3>
-    <div class="product">
-      <p id="prod-desc">Kit com 5 Luminárias Solares com 100 LEDs</p>
-      <p class="old">De R$ 159,90</p>
-      <p class="price" id="prod-price">139.90</p>
-      <button class="btn" onclick="addToCart()">Adicionar ao Carrinho</button>
-      <p style="margin-top:10px; color:#22c55e; font-weight:bold">🚚 Entrega local para Macapá e Santana – AP</p>
-    </div>
-  </section>  <section class="section" id="cart">
-    <h3>Carrinho</h3>
-    <div class="product">
-      <p><strong>Produto:</strong> <span id="cart-desc">—</span></p>
-      <p><strong>Quantidade:</strong> <span id="cart-qty">0</span></p>
-      <p><strong>Total:</strong> R$ <span id="cart-total">0.00</span></p>
-      <a id="checkoutBtn" class="btn" href="#" target="_blank" style="display:none">Finalizar no WhatsApp</a>
-    </div>
-  </section>  <footer>
-    <p>© 2026 MEGALUXI • Todos os direitos reservados</p>
-  </footer><script>
-  let qty = 0;
-  const price = 139.90;
-  const desc = 'Kit com 5 Luminárias Solares com 100 LEDs';
 
-  function addToCart() {
-    qty++;
-    document.getElementById('cart-desc').innerText = desc;
-    document.getElementById('cart-qty').innerText = qty;
-    document.getElementById('cart-total').innerText = (qty * price).toFixed(2);
+<body>
 
-    const msg = `Olá! Quero comprar ${qty}x ${desc}. Total: R$ ${(qty * price).toFixed(2)}.`;
-    const url = 'https://wa.me/5596984263542?text=' + encodeURIComponent(msg);
-    const btn = document.getElementById('checkoutBtn');
-    btn.href = url;
-    btn.style.display = 'inline-block';
+<header>
+  <!-- 🔴 ALTERE APENAS SE O CAMINHO DA LOGO FOR DIFERENTE -->
+  <img src="https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/logo.png" alt="MEGALUXI">
+  <h2>Iluminação Solar & Tecnologia</h2>
+</header>
 
-    document.getElementById('cart').scrollIntoView({ behavior: 'smooth' });
+<div class="container">
+
+  <section class="produto">
+    <img src="https://via.placeholder.com/500x400" alt="Refletor Solar">
+
+    <div>
+      <h1>Refletor Solar LED 300W</h1>
+      <p>
+        Iluminação potente, econômica e sustentável. Ideal para quintais,
+        áreas externas, fachadas e comércios.
+      </p>
+
+      <ul>
+        <li>Energia 100% solar</li>
+        <li>Sensor de presença</li>
+        <li>Resistente à chuva</li>
+        <li>Instalação fácil</li>
+      </ul>
+
+      <p class="preco">R$ 149,90</p>
+
+      <button onclick="adicionarCarrinho()">
+        Comprar agora
+      </button>
+    </div>
+  </section>
+
+  <section class="carrinho" id="carrinho">
+    <h2>Carrinho</h2>
+    <p id="itens">Nenhum item no carrinho.</p>
+    <p id="total"></p>
+
+    <button onclick="finalizarCompra()">
+      Finalizar pelo WhatsApp
+    </button>
+  </section>
+
+</div>
+
+<footer class="rodape">
+  <p><strong>Entrega local:</strong> Macapá e Santana – AP</p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/5596984263542" target="_blank">+55 96 98426-3542</a></p>
+
+  <p><strong>Termos de Uso:</strong> Os produtos são vendidos conforme descrição.
+  Entregas realizadas apenas nas cidades informadas.</p>
+
+  <p><strong>Política de Privacidade:</strong> Nenhum dado é compartilhado.
+  Informações usadas apenas para contato e entrega.</p>
+
+  <p>© 2026 MEGALUXI</p>
+</footer>
+
+<script>
+  let quantidade = 0;
+  let preco = 149.90;
+
+  function adicionarCarrinho() {
+    quantidade++;
+    document.getElementById("itens").innerText =
+      "Refletor Solar LED 300W | Quantidade: " + quantidade;
+    document.getElementById("total").innerText =
+      "Total: R$ " + (quantidade * preco).toFixed(2);
   }
-</script></body>
+
+  function finalizarCompra() {
+    if (quantidade === 0) {
+      alert("Adicione um produto ao carrinho.");
+      return;
+    }
+
+    let mensagem = `Olá, quero comprar ${quantidade} Refletor Solar LED 300W.
+Total: R$ ${(quantidade * preco).toFixed(2)}
+Entrega em Macapá ou Santana.`;
+
+    let url = "https://wa.me/5596984263542?text=" + encodeURIComponent(mensagem);
+    window.open(url, "_blank");
+  }
+</script>
+
+</body>
 </html>
