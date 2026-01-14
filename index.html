@@ -1,126 +1,74 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megaluxi - Iluminação Solar & Tecnologia</title>
-    <style>
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #001f3f; }
-        
-        /* Cabeçalho Estilo Profissional */
-        header { 
-            background-color: #001f3f; 
-            padding: 30px 10px; 
-            text-align: center; 
-            color: #f2b705;
-        }
-        .logo-img {
-            width: 100%;
-            max-width: 350px; /* Tamanho do seu logo */
-            height: auto;
-            margin-bottom: 5px;
-        }
-        .slogan {
-            font-size: 1.1em;
-            font-weight: 500;
-            color: #f2b705;
-            margin-top: 5px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEGALUXI | Iluminação Solar & Tecnologia</title>
+  <meta name="description" content="MEGALUXI - Iluminação solar inteligente com sensor de presença. Economia, segurança e sustentabilidade." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+    body { background: #0f172a; color: #f8fafc; }
+    header { background: #020617; padding: 20px; text-align: center; }
+    header h1 { color: #facc15; font-size: 2.2rem; }
+    header p { color: #cbd5f5; margin-top: 8px; }.hero { padding: 40px 20px; text-align: center; }
+.hero h2 { font-size: 2rem; margin-bottom: 15px; }
+.hero p { max-width: 700px; margin: auto; color: #cbd5f5; }
 
-        /* Banner de Estoque */
-        .status-bar {
-            background-color: #28a745;
-            color: white;
-            text-align: center;
-            padding: 8px;
-            font-weight: bold;
-            font-size: 0.9em;
-            text-transform: uppercase;
-        }
+.btn { display: inline-block; margin-top: 25px; padding: 15px 30px; background: #facc15; color: #020617; text-decoration: none; font-weight: bold; border-radius: 8px; }
 
-        /* Container do Produto */
-        .container { max-width: 500px; margin: 0 auto; padding: 20px; }
-        
-        .product-card { text-align: left; }
-        
-        .product-image {
-            width: 100%;
-            border-radius: 10px;
-            background-color: #f0f0f0;
-            margin-bottom: 20px;
-        }
+.section { padding: 40px 20px; max-width: 1100px; margin: auto; }
+.section h3 { text-align: center; margin-bottom: 30px; font-size: 1.8rem; }
 
-        h1 { font-size: 1.6em; color: #001f3f; margin-bottom: 10px; }
-        .description { color: #333; line-height: 1.4; margin-bottom: 15px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.card { background: #020617; padding: 25px; border-radius: 12px; text-align: center; }
+.card h4 { margin-bottom: 10px; color: #facc15; }
+.card p { color: #cbd5f5; }
 
-        .price-old { text-decoration: line-through; color: #888; font-size: 1em; margin-bottom: 2px; }
-        .price-new { color: #d9534f; font-size: 2.2em; font-weight: bold; margin-bottom: 5px; }
-        .shipping-info { color: #333; font-size: 0.9em; margin-bottom: 25px; }
+.product { background: #020617; padding: 30px; border-radius: 15px; text-align: center; }
+.price { font-size: 2rem; color: #22c55e; margin: 15px 0; }
+.old { text-decoration: line-through; color: #94a3b8; font-size: 1.2rem; }
 
-        /* Botão WhatsApp Estilo Imagem */
-        .btn-whatsapp {
-            display: block;
-            background-color: #f2b705;
-            color: #001f3f;
-            text-align: center;
-            padding: 15px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 1.2em;
-            text-transform: uppercase;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+footer { background: #020617; text-align: center; padding: 20px; color: #94a3b8; }
 
-        .features-check {
-            margin-top: 30px;
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        .features-check div { margin-bottom: 8px; font-weight: 500; }
-    </style>
+@media (max-width: 600px) {
+  header h1 { font-size: 1.8rem; }
+  .hero h2 { font-size: 1.6rem; }
+}
+
+  </style>
 </head>
-<body>
-
-<header>
-    <img src="1000697403.png" alt="MEGALUXI" class="logo-img">
-    <div class="slogan">Iluminação Solar & Tecnologia</div>
-</header>
-
-<div class="status-bar">
-    📍 PRODUTO EM ESTOQUE - ENVIO IMEDIATO NO AMAPÁ
-</div>
-
-<div class="container">
-    <div class="product-card">
-        <img src="1000697386.png" alt="Kit 5 Luminárias Solares" class="product-image" onerror="this.src='https://via.placeholder.com/500x350?text=IMAGEM+DO+KIT+5+LUMINÁRIAS'">
-
-        <h1>Kit 5 Luminárias Solares LED</h1>
-        <p class="description">Sensor de presença, 100% à prova d'água e custo zero na conta de luz.</p>
-
-        <div class="price-old">De R$ 139,99</div>
-        <div class="price-new">R$ 119,99</div>
-        <div class="shipping-info">Entrega grátis em pontos estratégicos de Macapá</div>
-
-        <a href="https://wa.me/5596984263542?text=Olá!+Vi+o+site+da+MegaLuxi+e+tenho+interesse+no+Kit+de+5+Luminárias" class="btn-whatsapp">
-            COMPRAR PELO WHATSAPP
-        </a>
-
-        <div class="features-check">
-            <div>✅ <strong>Por que comprar na MegaLuxi?</strong></div>
-            <div style="font-size: 0.9em; color: #555; padding-left: 20px;">
-                🚚 Receba hoje em Macapá ou Santana<br>
-                🛠️ Garantia de funcionamento e suporte local<br>
-                ☀️ Tecnologia testada no clima do Amapá
-            </div>
-        </div>
+<body>  <header>
+    <h1>MEGALUXI</h1>
+    <p>Iluminação Solar & Tecnologia</p>
+  </header>  <section class="hero">
+    <h2>Ilumine seu espaço sem gastar energia</h2>
+    <p>Luminárias solares com sensor de presença, ideais para casas, comércios, quintais e áreas externas. Economia, segurança e sustentabilidade em um único produto.</p>
+    <a href="#produto" class="btn">Ver Oferta</a>
+  </section>  <section class="section">
+    <h3>Por que escolher a MEGALUXI?</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>⚡ Energia Solar</h4>
+        <p>Funciona 100% com energia do sol. Zero gasto na conta de luz.</p>
+      </div>
+      <div class="card">
+        <h4>👀 Sensor de Presença</h4>
+        <p>Acende automaticamente ao detectar movimento.</p>
+      </div>
+      <div class="card">
+        <h4>🌧️ Resistente</h4>
+        <p>Resistente à chuva e ao calor. Ideal para áreas externas.</p>
+      </div>
     </div>
-</div>
-
-<footer style="text-align: center; padding: 20px; color: #888; font-size: 0.8em;">
-    © 2024 MegaLuxi - Macapá/AP
-</footer>
-
-</body>
+  </section>  <section class="section" id="produto">
+    <h3>Oferta Especial</h3>
+    <div class="product">
+      <p>Kit com 5 Luminárias Solares com 100 LEDs</p>
+      <p class="old">De R$ 159,90</p>
+      <p class="price">Por R$ 139,90</p>
+      <a href="https://wa.me/5596984263541?text=Olá!%20Quero%20comprar%20o%20Kit%20com%205%20Luminárias%20Solares%20da%20MEGALUXI%20por%20R$%20139,90." class="btn" target="_blank">Comprar Agora</a>
+      <p style="margin-top:10px; color:#94a3b8">Entrega rápida em todo o Brasil</p>
+    </div>
+  </section>  <footer>
+    <p>© 2026 MEGALUXI • Todos os direitos reservados</p>
+  </footer></body>
 </html>
