@@ -21,7 +21,7 @@
     }
 
     header img {
-      max-width: 280px; /* Ajustado para melhor visualização da sua logo */
+      max-width: 280px; 
       height: auto;
     }
 
@@ -44,6 +44,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .produto img {
@@ -53,12 +54,21 @@
 
     .produto h1 {
       margin-top: 0;
+      color: #0a2c5e;
     }
 
     .preco {
       font-size: 26px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .pix-destaque {
       color: #0a7d2c;
       font-weight: bold;
+      font-size: 18px;
+      margin-top: 0;
     }
 
     button {
@@ -72,6 +82,7 @@
       width: 100%;
       font-weight: bold;
       color: #0a2c5e;
+      transition: 0.3s;
     }
 
     button:hover {
@@ -83,10 +94,17 @@
       background: #fff;
       padding: 20px;
       border-radius: 8px;
+      border-left: 5px solid #0a7d2c;
     }
 
     .carrinho h2 {
       margin-top: 0;
+    }
+
+    #total-pix {
+      font-size: 20px;
+      color: #0a7d2c;
+      font-weight: bold;
     }
 
     .rodape {
@@ -95,6 +113,7 @@
       padding: 20px;
       margin-top: 40px;
       font-size: 14px;
+      text-align: center;
     }
 
     .rodape a {
@@ -120,36 +139,37 @@
 <div class="container">
 
   <section class="produto">
-    <img src="https://via.placeholder.com/500x400?text=Refletor+Solar+300W" alt="Refletor Solar">
+    <img src="https://via.placeholder.com/500x400?text=Kit+Luminaria+Solar+4un" alt="Kit Luminária Solar">
 
     <div>
-      <h1>Refletor Solar LED 300W</h1>
+      <h1>Kit Luminária Solar LED</h1>
       <p>
-        Iluminação potente, econômica e sustentável. Ideal para quintais,
-        áreas externas, fachadas e comércios.
+        <strong>Combo com 4 unidades!</strong> Iluminação inteligente com sensor de movimento e total resistência à água. Ideal para muros, jardins e passagens.
       </p>
 
       <ul>
-        <li>Energia 100% solar</li>
-        <li>Sensor de presença</li>
-        <li>Resistente à chuva</li>
-        <li>Instalação fácil</li>
+        <li>Sensor de movimento e fotocélula</li>
+        <li>À prova d'água (Resistente à chuva)</li>
+        <li>Fácil instalação (sem fios)</li>
+        <li>Energia 100% sustentável</li>
       </ul>
 
-      <p class="preco">R$ 149,90</p>
+      <p class="preco">R$ 89,99 <small style="font-size: 14px; font-weight: normal;">(pelo kit)</small></p>
+      <p class="pix-destaque">R$ 85,49 no Pix (5% OFF)</p>
 
       <button onclick="adicionarCarrinho()">
-        Comprar agora
+        Adicionar ao Carrinho
       </button>
     </div>
   </section>
 
   <section class="carrinho" id="carrinho">
-    <h2>Carrinho</h2>
-    <p id="itens">Nenhum item no carrinho.</p>
-    <p id="total"></p>
+    <h2>Resumo do Pedido</h2>
+    <p id="itens">O seu carrinho está vazio.</p>
+    <p id="total-normal"></p>
+    <p id="total-pix"></p>
 
-    <button onclick="finalizarCompra()">
+    <button onclick="finalizarCompra()" style="background: #25d366; color: #fff;">
       Finalizar pelo WhatsApp
     </button>
   </section>
@@ -159,39 +179,45 @@
 <footer class="rodape">
   <p><strong>Entrega local:</strong> Macapá e Santana – AP</p>
   <p><strong>WhatsApp:</strong> <a href="https://wa.me/5596984263542" target="_blank">+55 96 98426-3542</a></p>
-
-  <p><strong>Termos de Uso:</strong> Os produtos são vendidos conforme descrição.
-  Entregas realizadas apenas nas cidades informadas.</p>
-
-  <p><strong>Política de Privacidade:</strong> Nenhum dado é compartilhado.
-  Informações usadas apenas para contato e entrega.</p>
-
-  <p>© 2026 MEGALUXI</p>
+  <p>© 2026 MEGALUXI - Todos os direitos reservados</p>
 </footer>
 
 <script>
   let quantidade = 0;
-  let preco = 149.90;
+  const precoBase = 89.99;
 
   function adicionarCarrinho() {
     quantidade++;
-    document.getElementById("itens").innerText =
-      "Refletor Solar LED 300W | Quantidade: " + quantidade;
-    document.getElementById("total").innerText =
-      "Total: R$ " + (quantidade * preco).toFixed(2);
+    atualizarDisplay();
+  }
+
+  function atualizarDisplay() {
+    const totalNormal = (quantidade * precoBase);
+    const totalPix = (totalNormal * 0.95);
+
+    document.getElementById("itens").innerHTML = 
+      `<strong>Produto:</strong> Kit Luminária Solar LED (4 un)<br><strong>Quantidade:</strong> ${quantidade} kit(s)`;
+    
+    document.getElementById("total-normal").innerText = 
+      "Total Normal: R$ " + totalNormal.toFixed(2);
+    
+    document.getElementById("total-pix").innerText = 
+      "Total no Pix (5% OFF): R$ " + totalPix.toFixed(2);
   }
 
   function finalizarCompra() {
     if (quantidade === 0) {
-      alert("Adicione um produto ao carrinho.");
+      alert("Por favor, adicione o produto ao carrinho primeiro.");
       return;
     }
 
-    let mensagem = `Olá, quero comprar ${quantidade} Refletor Solar LED 300W.
-Total: R$ ${(quantidade * preco).toFixed(2)}
-Entrega em Macapá ou Santana.`;
+    const totalPix = (quantidade * precoBase * 0.95).toFixed(2);
+    const mensagem = `Olá, MEGALUXI! Gostaria de encomendar:
+- ${quantidade}x Kit Luminária Solar LED (Total de ${quantidade * 4} luminárias)
+- Valor Total no Pix: R$ ${totalPix}
+- Entrega em Macapá/Santana.`;
 
-    let url = "https://wa.me/5596984263542?text=" + encodeURIComponent(mensagem);
+    const url = "https://wa.me/5596984263542?text=" + encodeURIComponent(mensagem);
     window.open(url, "_blank");
   }
 </script>
